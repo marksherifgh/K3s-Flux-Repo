@@ -13,12 +13,12 @@ spec:
     metadata:
       labels:
         app: hello-world
-  spec:
-    containers:
-      - name: hello-world
-        image: bhargavshah86/kube-test:v0.1
-        ports:
-          - containerPort: 80
-        resources:
-          requests:
-            memory: 256Mi
+    spec:  # Fix indentation here
+      containers:
+        - name: hello-world
+          image: bhargavshah86/kube-test:v0.1
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: 256Mi
