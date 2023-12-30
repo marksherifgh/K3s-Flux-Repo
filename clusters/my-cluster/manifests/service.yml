@@ -1,13 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-service
+  name: dummy-deployment
   namespace: default
-
 spec:
   selector:
-    app: nginx  # Match labels in the pod
+    app: dummy-deployment
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
+      port: 5678
+      targetPort: 5678
