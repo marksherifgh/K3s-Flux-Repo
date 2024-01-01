@@ -8,7 +8,7 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
     nginx.ingress.kubernetes.io/auth-url: "http://authelia-service.authelia.svc.cluster.local/api/verify"
-    nginx.ingress.kubernetes.io/auth-signin: "http://ec2-52-210-234-232.eu-west-1.compute.amazonaws.com"
+    nginx.ingress.kubernetes.io/auth-signin: "http://ec2-3-250-220-107.eu-west-1.compute.amazonaws.com"
 spec:
   # tls:
   # - hosts:
