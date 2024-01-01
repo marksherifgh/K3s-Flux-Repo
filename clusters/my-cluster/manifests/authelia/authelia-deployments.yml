@@ -81,6 +81,7 @@ spec:
     http:
       paths:
       - path: /
+        pathType: Prefix
         backend:
           serviceName: authelia-service
           servicePort: 80
