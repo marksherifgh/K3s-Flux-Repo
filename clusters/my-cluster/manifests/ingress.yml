@@ -9,10 +9,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - dummy-service.com
+    - dummy-service.rf.gd
     secretName: dummy-tls
   rules:
-    - host: dummy-service.com
+    - host: dummy-service.rf.gd
       http:
         paths:
         - path: /
