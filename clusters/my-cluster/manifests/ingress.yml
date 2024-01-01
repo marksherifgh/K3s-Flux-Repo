@@ -9,10 +9,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - dummy-service.rf.gd
+    - ec2-3-253-88-42.eu-west-1.compute.amazonaws.com
     secretName: dummy-tls
   rules:
-    - host: dummy-service.rf.gd
+    - host: ec2-3-253-88-42.eu-west-1.compute.amazonaws.com
       http:
         paths:
         - path: /
