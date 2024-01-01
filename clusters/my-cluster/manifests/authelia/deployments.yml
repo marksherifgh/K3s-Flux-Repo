@@ -77,7 +77,7 @@ spec:
   #   - auth.dummy-service.com
 
   rules:
-    - host: auth.dummy-service.com
+    - host: auth.ec2-52-50-99-75.eu-west-1.compute.amazonaws.com
       http:
         paths:
         - path: /
