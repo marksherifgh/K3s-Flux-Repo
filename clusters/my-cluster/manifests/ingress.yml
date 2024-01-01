@@ -10,8 +10,7 @@ spec:
   tls:
   - hosts:
     - dummy-service.example.com
-    secretName: letsencrypt-secret
-    namespace: cert-manager
+    secretName: dummy-tls
   rules:
     - host: dummy-service.example.com
       http:
