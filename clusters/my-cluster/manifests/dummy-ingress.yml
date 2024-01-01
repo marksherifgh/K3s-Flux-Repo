@@ -15,7 +15,7 @@ spec:
   #   - dummy-service.com
   #   secretName: dummy-tls
   rules:
-    - host: 3.253.88.42
+    - host: http://dummy-service.com
       http:
         paths:
         - path: /
