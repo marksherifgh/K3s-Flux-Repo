@@ -29,13 +29,13 @@ spec:
         persistentVolumeClaim:
           claimName: authconf
       containers:
-      - name: authelia
-        image: clems4ever/authelia
-        ports:
-        - containerPort: 8080
-        volumeMounts:
-        - name: authconf
-          mountPath: /etc/authelia
+        - name: authelia
+          image: clems4ever/authelia
+          ports:
+          - containerPort: 8080
+          volumeMounts:
+          - name: authconf
+            mountPath: /etc/authelia
 
 ---
 apiVersion: v1
