@@ -83,6 +83,7 @@ spec:
       - path: /
         pathType: Prefix
         backend:
-          name: authelia-service
-          port:
-            number: 80
+          service:
+            name: authelia-service
+            port:
+              number: 80
