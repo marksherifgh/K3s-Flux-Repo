@@ -15,7 +15,7 @@ spec:
   #   - dummy-service.com
   #   secretName: dummy-tls
   rules:
-    - host: dummy-service.com
+    - host: ec2-52-50-99-75.eu-west-1.compute.amazonaws.com
       http:
         paths:
         - path: /
