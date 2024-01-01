@@ -70,12 +70,13 @@ spec:
   #   - dummy-service.com
 
   rules:
-  - host: dummy-service.com
-    http:
-      paths:
-      - path: /
-        backend:
-          service:
-            name: authelia-service
-            port:
-              number: 80
+    - host: dummy-service.com
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: authelia-service
+              port:
+                number: 80
