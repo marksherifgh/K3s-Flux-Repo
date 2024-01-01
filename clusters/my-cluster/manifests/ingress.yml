@@ -16,12 +16,12 @@ spec:
     - host: dummy-service.example.com
       http:
         paths:
-        - path: /
-          pathType: Prefix
-        backend:
+        - backend:
           service:
             name: dummy-service
             port:
               number: 5678
+          path: /
+          pathType: Prefix
 
   ingressClassName: nginx
