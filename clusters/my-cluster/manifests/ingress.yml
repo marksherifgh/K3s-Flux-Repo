@@ -11,6 +11,7 @@ spec:
   - hosts:
     - dummy-service.example.com
     secretName: letsencrypt-secret
+    namespace: cert-manager
   rules:
     - host: dummy-service.example.com
       http:
