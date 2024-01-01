@@ -75,9 +75,9 @@ spec:
   tls:
   - secretName: authelia-ingress-tls
     hosts:
-    - dummy-service.com
+    - auth.dummy-service.com
   rules:
-  - host: dummy-service.com
+  - host: auth.dummy-service.com
     http:
       paths:
       - path: /
