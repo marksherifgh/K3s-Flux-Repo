@@ -4,7 +4,7 @@ metadata:
   namespace: authelia
   name: authelia-conf
 data:
-  configuration.yml: 
+  configuration.yml: |
     authentication_backend:
       ldap:
         url: ldaps://YOURIP:636
