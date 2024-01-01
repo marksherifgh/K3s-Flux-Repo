@@ -63,18 +63,19 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: "nginx"
     cert-manager.io/cluster-issuer: "letsencrypt-staging"
-  
-  # tls:
-  # - secretName: authelia-ingress-tls
-  #   hosts:
-  #   - dummy-service.com
-  rules:
-  - host: dummy-service.com
-    http:
-      paths:
-      - path: /
-        backend:
-          service:
-            name: authelia-service
-            port:
-              number: 80
+  spec:
+    # tls:
+    # - secretName: authelia-ingress-tls
+    #   hosts:
+    #   - dummy-service.com
+
+    rules:
+    - host: dummy-service.com
+      http:
+        paths:
+        - path: /
+          backend:
+            service:
+              name: authelia-service
+              port:
+                number: 80
