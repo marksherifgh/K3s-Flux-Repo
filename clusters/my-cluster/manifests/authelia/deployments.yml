@@ -23,30 +23,19 @@ spec:
     metadata:
       labels:
         app: authelia
-    spec:
+      spec:
+      volumes:
+      - name: authelia-conf
+        persistentVolumeClaim:
+          claimName: authconf
       containers:
       - name: authelia
-        image: authelia/authelia:4.9 #  <----- You should use an explicit version here docker pull 
-        imagePullPolicy: Always
+        image: clems4ever/authelia
         ports:
-        - containerPort: 9091
+        - containerPort: 8080
         volumeMounts:
-        - name: config-volume
-          mountPath: /etc/authelia
-        - name: dbvolume
-          mountPath: /var/lib/authelia       
-      volumes:
-      - name: dbvolume
-        emptyDir:
-          {}
-      - name: config-volume
-        configMap:
-          name: authelia-config
-          items:
-          - key: configuration.yml
-            path: configuration.yml
-          - key: users.yaml
-            path: users.yaml           
+        - name: authconf
+          mountPath: /etc/authelia   
 
 ---
 apiVersion: v1
@@ -59,7 +48,7 @@ spec:
     app: authelia
   ports:
   - protocol: TCP
-    port: 80
+    port: 8080
     targetPort: 9091
 
 ---
