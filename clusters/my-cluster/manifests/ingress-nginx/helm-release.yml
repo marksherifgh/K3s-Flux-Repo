@@ -6,8 +6,9 @@ metadata:
 spec:
   releaseName: ingress-nginx
   chart:
-    chart: https://github.com/kubernetes/ingress-nginx/blob/main/charts/ingress-nginx/Chart.yaml
-    version: 4.0.10
+    spec:
+      chart: https://github.com/kubernetes/ingress-nginx/blob/main/charts/ingress-nginx/Chart.yaml
+      version: 4.0.10
   values:
     controller:
       service:
