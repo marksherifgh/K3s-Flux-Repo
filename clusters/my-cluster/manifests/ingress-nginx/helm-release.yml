@@ -1,0 +1,14 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: ingress-nginx
+  namespace: ingress-nginx
+spec:
+  releaseName: ingress-nginx
+  chart:
+    chart: https://github.com/kubernetes/ingress-nginx/blob/main/charts/ingress-nginx/Chart.yaml
+    version: 4.0.10
+  values:
+    controller:
+      service:
+        enabled: true
