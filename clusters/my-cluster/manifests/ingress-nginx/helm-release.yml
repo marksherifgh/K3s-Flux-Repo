@@ -10,6 +10,9 @@ spec:
     spec:
       chart: https://github.com/kubernetes/ingress-nginx/blob/main/charts/ingress-nginx/Chart.yaml
       version: 4.0.10
+      sourceRef:
+        kind: GitRepository
+        name: ingress-nginx
   values:
     controller:
       service:
